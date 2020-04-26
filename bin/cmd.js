@@ -15,15 +15,13 @@ const argv = require('minimist')(process.argv.slice(2), {
     target: 't'
   },
   default: {
-    ignore: [],
+    ignore: '',
     dims: 2
   }
 })
 
 argv.ignore = argv.ignore.split(',').map(v => v.trim())
 if (argv.target && argv.target.length) argv.ignore.push(argv.target)
-
-console.log(argv)
 
 // Read
 let input
@@ -45,7 +43,6 @@ if (records.length) {
     columns = records.shift()
   }
   const X = records.map((r, ri) => r.filter((_, ci) => !argv.ignore.includes(columns[ci])))
-  console.log(X[0])
   const Y = dimred(X, argv)
   output += new Array(argv.dims).fill('x').map((v, i) => v + (i + 1)).join(',')
   if (argv.target && argv.target.length) output += ',y'
