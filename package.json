@@ -2,7 +2,7 @@
   "name": "dimred",
   "version": "0.0.1",
   "description": "Dimensionality reduction methods",
-  "main": "index.js",  
+  "main": "index.js",
   "bin": {
     "dimred": "bin/cmd.js"
   },
@@ -27,5 +27,8 @@
     "ml-som": "0.0.6",
     "tsne": "^1.0.1",
     "umap-js": "^1.3.2"
+  },
+  "devDependencies": {
+    "mkdata": "0.0.11"
   }
 }
