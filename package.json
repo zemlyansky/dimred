@@ -1,6 +1,6 @@
 {
   "name": "dimred",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dimensionality reduction methods",
   "main": "index.js",
   "bin": {
